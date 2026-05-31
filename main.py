@@ -5,6 +5,7 @@ import asyncio
 from config import ALTITUDE
 from drone_connection import connect_drone
 from mission_builder import build_mission
+from geofence import upload_geofence
 from safety import (
     wait_for_gps,
     check_battery,
@@ -20,6 +21,7 @@ async def run():
     # Safety checks
     await wait_for_gps(drone)
     await check_battery(drone)
+    await upload_geofence(drone) # Upload geofence BEFORE arming
     await drone.action.set_takeoff_altitude(ALTITUDE)
 
     # Upload mission

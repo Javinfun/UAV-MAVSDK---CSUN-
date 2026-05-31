@@ -1,5 +1,7 @@
 # config.py
 
+from mavsdk.geofence import FenceType
+
 # Parthenia Park 
 # WAYPOINTS = [ 
 # (34.2923332105563, -118.57133529062892), 
@@ -12,9 +14,10 @@
 # ]
 
 WAYPOINTS = [
-    (34.2408223, -118.5290051),
-    (34.2408091, -118.5290582),
-    (34.2408457, -118.5290311),
+    (34.2408612, -118.5289852),
+    (34.2408396, -118.5289961),
+    (34.2408390, -118.5290621),
+    (34.2408618, -118.5290606),
 ]
 
 ALTITUDE = 20.0
@@ -24,3 +27,14 @@ SYSTEM_ADDRESS = "udpin://0.0.0.0:14540"
 
 # Raspberry Pi example:
 # SYSTEM_ADDRESS = "serial:///dev/ttyAMA0:921600"
+
+# GEOFENCE
+
+GEOFENCE_ACTION = FenceType.INCLUSION
+
+GEOFENCE_POINTS = [
+    (34.2409000, -118.5291200),
+    (34.2409000, -118.5289000),
+    (34.2407000, -118.5289000),
+    (34.2407000, -118.5291200),
+]

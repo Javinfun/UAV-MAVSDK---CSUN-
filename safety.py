@@ -19,7 +19,7 @@ async def wait_for_gps(drone):
 async def check_battery(drone):
     async for battery in drone.telemetry.battery():
 
-        percent = battery.remaining_percent * 100
+        percent = battery.remaining_percent
 
         print(f"Battery: {percent:.1f}%")
 

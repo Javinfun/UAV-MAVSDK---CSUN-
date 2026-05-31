@@ -16,11 +16,11 @@ def build_mission():
                 lon,                               # longitude_deg
                 ALTITUDE,                          # relative_altitude_m
                 SPEED,                             # speed_m_s
-                True,                              # is_fly_through
+                False,                              # is_fly_through
                 float("nan"),                      # gimbal_pitch_deg
                 float("nan"),                      # gimbal_yaw_deg
                 MissionItem.CameraAction.NONE,     # camera_action
-                float("nan"),                      # loiter_time_s
+                5.0,                      # loiter_time_s
                 float("nan"),                      # camera_photo_interval_s
                 float("nan"),                      # acceptance_radius_m
                 float("nan"),                      # yaw_deg
