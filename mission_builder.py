@@ -20,7 +20,7 @@ def build_mission():
                 float("nan"),                      # gimbal_pitch_deg
                 float("nan"),                      # gimbal_yaw_deg
                 MissionItem.CameraAction.NONE,     # camera_action
-                5.0,                      # loiter_time_s
+                2.0,                      # loiter_time_s
                 float("nan"),                      # camera_photo_interval_s
                 float("nan"),                      # acceptance_radius_m
                 float("nan"),                      # yaw_deg

@@ -24,6 +24,10 @@ async def upload_geofence(drone):
 
     print("Uploading geofence...")
 
+    print("Fence points:")
+    for i, point in enumerate(GEOFENCE_POINTS):
+        print(f"  {i}: {point}")
+
     polygon = build_polygon()
 
     geofence_data = GeofenceData(
